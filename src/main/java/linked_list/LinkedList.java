@@ -8,11 +8,6 @@ public abstract class LinkedList<T> {
     public final int GET_OK = 1; //сгккуте содержит ссылку на существующий узел
     public final int FIND_ERR = 2; //список пустой
 
-    private Node<T> current;
-    private Node<T> head;
-    private Node<T> tail;
-
-
     // конструктор
     // постусловие: создан новый связный список
     public abstract LinkedList<T> LinkedList();
@@ -50,13 +45,14 @@ public abstract class LinkedList<T> {
     public abstract void addTail(T val);
 
     //предусловие: курсор содержит ссылку на существующий узел
-    //постусловие: значение текущего узна изменено
+    //постусловие: значение текущего узла изменено на новое
     public abstract void replace(T val);
 
     //предусловие: курсор содержит ссылку на существующий узел
     //постусловие: курсор содержит ссылку на найденный узел, иначе ссылка остается прежней
     public abstract void find(T val);
 
+    // постусловие: в списке удалены все узлы с заданным значением
     public abstract void removeAll();
 
 
