@@ -16,7 +16,7 @@ public abstract class ParentQueue<T>{
 
     // запросы
     // предусловие: очередь не пуста
-    public abstract T get(); // получить элемент из головы очереди;
+    public abstract T getFront(); // получить элемент из головы очереди;
 
     public abstract int size(); // текущий размер очереди
 
